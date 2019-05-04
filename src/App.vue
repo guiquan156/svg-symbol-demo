@@ -3,6 +3,7 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <Icon icon="dollar"/>
     <Icon icon="check-circle"/>
+    <img alt="Vue logo" src="./assets/dollar.svg">
   </div>
 </template>
 

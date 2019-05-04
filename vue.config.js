@@ -3,10 +3,13 @@ const path = require('path');
 module.exports = {
   publicPath: '',
   chainWebpack: config => {
-    const svgRule = config.module.rule('svg');
-    svgRule.uses.clear();
-    svgRule
-      .test(/\.svg$/)
+    config.module
+      .rule('svg')
+      .exclude
+        .add([path.resolve('src/assets/svgs')]);
+
+    config.module.rule('icon')
+      .test(/\.svg(\?.*)?$/)
       .include
         .add([path.resolve('src/assets/svgs')])
         .end()
