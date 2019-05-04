@@ -1,13 +1,25 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
+    <Icon icon="dollar"/>
+    <Icon icon="check-circle"/>
   </div>
 </template>
 
 <script>
+import Icon from './components/icon';
 
 export default {
   name: 'app',
+  components: {
+    Icon
+  },
+  data () {
+    return {
+      svgDollar: Dollar,
+      svgCricle: CheckCircle
+    }
+  }
 }
 </script>
 
