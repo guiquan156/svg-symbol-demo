@@ -16,8 +16,6 @@ export default {
   },
   data () {
     return {
-      svgDollar: Dollar,
-      svgCricle: CheckCircle
     }
   }
 }

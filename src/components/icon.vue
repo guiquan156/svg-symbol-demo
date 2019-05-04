@@ -29,8 +29,8 @@ export default {
 <style>
 .icon {
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 1em;
+  height: 1em;
 }
 </style>
 
