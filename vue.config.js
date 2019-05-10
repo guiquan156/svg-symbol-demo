@@ -6,7 +6,14 @@ module.exports = {
     config.module
       .rule('svg')
       .exclude
-        .add([path.resolve('src/assets/svgs')]);
+        .add([path.resolve('src/assets/svgs')])
+        .end()
+      .use('svg-transform-loader')
+        .loader('svg-transform-loader')
+        .end()
+      .use('svgo-loader')
+        .loader('svgo-loader')
+        .end();
 
     config.module.rule('icon')
       .test(/\.svg(\?.*)?$/)
@@ -24,6 +31,6 @@ module.exports = {
         .end()
       .use('svgo-loader')
         .loader('svgo-loader')
-        .end()
+        .end();
   }
 };
